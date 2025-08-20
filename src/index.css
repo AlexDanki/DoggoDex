@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body{
+  width: 1080px;
+  margin: 0 auto;
+}
+
 button{
   border: none;
+  cursor: pointer;
 }
