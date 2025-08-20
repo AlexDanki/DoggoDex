@@ -5,8 +5,10 @@
 }
 
 body{
-  width: 1080px;
+  width: 100%;
+  max-width: 1080px;
   margin: 0 auto;
+  background-image: url('../src/assets/body-papel-de-parede.png');
 }
 
 button{
