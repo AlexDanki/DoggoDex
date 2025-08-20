@@ -1,0 +1,30 @@
+
+.form{
+    max-width: 300px;
+    display:flex;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    gap:8px;
+}
+
+.form input{
+    color:#6c6c6c;
+    width: 100%;
+    padding:4px 8px;
+    outline: none;
+}
+
+.form button{
+    color:#fff;
+    background-color: #3F647F;
+    padding:4px 8px;
+    outline: none;
+}
+
+
+.console{
+    width: 600px;
+    height: 350px;
+    margin: 0 auto;
+}
+
