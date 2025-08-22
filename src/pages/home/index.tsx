@@ -73,6 +73,22 @@ export function Home(){
                     <img className={style.image} src={`https://cdn2.thedogapi.com/images/${fistItem?.reference_image_id}.jpg`} alt="" />
                 </div>
                 <div style={{backgroundImage:`url(${TecRightImg})`}} className={style.tecRightImg}>
+                    <div className={style.info}>
+                        <h3>Raça: </h3> 
+                        <span>{fistItem?.name}</span>
+
+                        <h3>Altura:</h3>
+                        <span>{fistItem?.name}</span>
+
+                        <h3>Tempo de vida:</h3>
+                        <span>{fistItem?.name}</span>
+
+                        <h3>Temperamento:</h3>
+                        <span>{fistItem?.name}</span>
+
+                        <h3>Criado para:</h3>
+                        <span>{fistItem?.name}</span>
+                    </div>
                 </div>
             </div>
         </div>
