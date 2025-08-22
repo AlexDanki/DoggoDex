@@ -34,7 +34,8 @@ export function Home(){
     },[pesquisa])
 
     async function getData(){
-        const path= `https://api.thedogapi.com/v1/breeds/search?q=${pesquisa}&x-api-key=live_ED4LvYmiXEuBGEJUVVY8UK5hRIZ4Z2Mwk3Flp2mrrruf49pELZUQNZUeUMePGRU9`
+        const apiKey = import.meta.env.DOG_API_KEY;
+        const path= `https://api.thedogapi.com/v1/breeds/search?q=${pesquisa}&x-api-key=${apiKey}`
         fetch(path).
         then(response => response.json()).
         then((data:dataProps[])=>{
