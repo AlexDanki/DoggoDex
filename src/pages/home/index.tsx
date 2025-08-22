@@ -3,6 +3,8 @@ import {useState, FormEvent, useEffect} from "react"
 
 import style from './style.module.css'
 import doggoDexImg from '../../assets/novaPokedexTec.png'
+import TecLeftImg from '../../assets/TecLeft.png'
+import TecRightImg from '../../assets/TecRight.png'
 
 interface dataProps{
     breed_for: string;
@@ -66,8 +68,28 @@ export function Home(){
                 type="text" placeholder='Perquise por raça'/>
                 <button type='submit'>Pesquisar</button>
             </form>
-            <div style={{backgroundImage:`url(${doggoDexImg})`}} className={style.console}>
-                <img className={style.image} src={`https://cdn2.thedogapi.com/images/${fistItem?.reference_image_id}.jpg`} alt="" />
+            <div className={style.tecs}>
+                <div style={{backgroundImage:`url(${TecLeftImg})`}} className={style.tecLeftImg}>
+                    <img className={style.image} src={`https://cdn2.thedogapi.com/images/${fistItem?.reference_image_id}.jpg`} alt="" />
+                </div>
+                <div style={{backgroundImage:`url(${TecRightImg})`}} className={style.tecRightImg}>
+                    <div className={style.info}>
+                        <h3>Raça: </h3> 
+                        <span>{fistItem?.name}</span>
+
+                        <h3>Altura:</h3>
+                        <span>{fistItem?.name}</span>
+
+                        <h3>Tempo de vida:</h3>
+                        <span>{fistItem?.name}</span>
+
+                        <h3>Temperamento:</h3>
+                        <span>{fistItem?.name}</span>
+
+                        <h3>Criado para:</h3>
+                        <span>{fistItem?.name}</span>
+                    </div>
+                </div>
             </div>
         </div>
     )
