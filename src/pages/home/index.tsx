@@ -7,9 +7,12 @@ import TecLeftImg from '../../assets/TecLeft.png'
 import TecRightImg from '../../assets/TecRight.png'
 
 interface dataProps{
-    breed_for: string;
+    bred_for: string;
     breed_group: string;
-    height: string
+    height: {
+        imperial: string,
+        metric: string
+    }
     id: string;
     life_span: string;
     name: string;
@@ -29,6 +32,7 @@ export function Home(){
 
     useEffect(()=>{
         getData()
+        
         //getImage()
         
     },[pesquisa])
@@ -51,6 +55,8 @@ export function Home(){
             setFirstItem(newData[0])
             
         })
+
+        
     }
 
     function handleSubmit(e: FormEvent){
@@ -59,6 +65,12 @@ export function Home(){
         console.log(dataList)
         setInput(input)
         setPesquisa(input)
+    }
+
+    function handleFormatString(height: string, char: string){
+        const index = Number(height.indexOf(char))
+
+        return height.slice(0, index);
     }
 
     return(
@@ -79,16 +91,16 @@ export function Home(){
                         <span>{fistItem?.name}</span>
 
                         <h3>Altura:</h3>
-                        <span>{fistItem?.name}</span>
+                        <span>{fistItem?.height.metric} cm</span>
 
                         <h3>Tempo de vida:</h3>
-                        <span>{fistItem?.name}</span>
+                        <span>{fistItem?.life_span}</span>
 
                         <h3>Temperamento:</h3>
-                        <span>{fistItem?.name}</span>
+                        <span>{fistItem?.temperament}</span>
 
                         <h3>Criado para:</h3>
-                        <span>{fistItem?.name}</span>
+                        <span>{fistItem?.bred_for}</span>
                     </div>
                 </div>
             </div>
