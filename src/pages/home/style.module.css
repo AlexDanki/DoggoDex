@@ -28,7 +28,15 @@
     height: 350px;
     margin: 0 auto;
 }
-
+.tecs h4{
+    color:#8f8f8f;
+        width: 100%;
+        height: 100%;
+        max-width: 160px;
+        max-height: 160px;
+        margin-top:116px;
+        margin-left: 60px;
+}
 .tecLeftImg{
     width: 50%;
     height: 100%;
@@ -54,6 +62,7 @@
 }
 
 .info h3{
+    max-width: 200px;
     color:#092438;
     font-size:12px;
     font-weight: bold;

@@ -83,24 +83,42 @@ export function Home(){
             </form>
             <div className={style.tecs}>
                 <div style={{backgroundImage:`url(${TecLeftImg})`}} className={style.tecLeftImg}>
-                    <img className={style.image} src={`https://cdn2.thedogapi.com/images/${fistItem?.reference_image_id}.jpg`} alt="" />
+                    {
+                        fistItem && (
+                            <img className={style.image} src={`https://cdn2.thedogapi.com/images/${fistItem?.reference_image_id}.jpg`} alt="" />
+                        )
+
+                    }
+                    {
+                        !fistItem && (<h4 className={style.image}>Sem sinal...</h4>)
+                    }
                 </div>
                 <div style={{backgroundImage:`url(${TecRightImg})`}} className={style.tecRightImg}>
                     <div className={style.info}>
-                        <h3>Raça: </h3> 
-                        <span>{fistItem?.name}</span>
+                        {
+                            fistItem && (
+                                <div>
+                                    <h3>Raça: </h3> 
+                                    <span>{fistItem?.name}</span>
 
-                        <h3>Altura:</h3>
-                        <span>{fistItem?.height.metric} cm</span>
+                                    <h3>Altura:</h3>
+                                    <span>{fistItem?.height.metric} cm</span>
 
-                        <h3>Tempo de vida:</h3>
-                        <span>{fistItem?.life_span}</span>
+                                    <h3>Tempo de vida:</h3>
+                                    <span>{fistItem?.life_span}</span>
 
-                        <h3>Temperamento:</h3>
-                        <span>{fistItem?.temperament}</span>
+                                    <h3>Temperamento:</h3>
+                                    <span>{fistItem?.temperament}</span>
 
-                        <h3>Criado para:</h3>
-                        <span>{fistItem?.bred_for}</span>
+                                    <h3>Criado para:</h3>
+                                    <span>{fistItem?.bred_for}</span>
+                                </div>
+                            )
+                        }
+                        {
+                            !fistItem && (<h3>Raça não Encontrada, por favor verifique e tente novamente :)</h3>)
+                        }
+                        
                     </div>
                 </div>
             </div>
